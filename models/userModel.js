@@ -17,6 +17,8 @@ const createUserTable = async () => {
             email VARCHAR(100) UNIQUE,
             password VARCHAR(255),
             role ENUM('client', 'admin') DEFAULT 'client',
+            otp VARCHAR(10),
+            otp_expiry TIMESTAMP,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         );
     `);
